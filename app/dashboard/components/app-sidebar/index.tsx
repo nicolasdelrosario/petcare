@@ -4,9 +4,6 @@
 import * as React from 'react'
 import { useState, useEffect } from 'react'
 
-// components
-import { ModeToggle } from '../mode-toggle'
-
 // shadcn
 import { NavMain } from '../nav-main'
 import { NavProjects } from '../nav-projects'
@@ -106,7 +103,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 			</SidebarContent>
 			{user && (
 				<SidebarFooter>
-					<ModeToggle />
 					<NavUser user={user} />
 				</SidebarFooter>
 			)}
