@@ -15,6 +15,9 @@ import {
 } from '@/components/ui/breadcrumb'
 import { Separator } from '@/components/ui/separator'
 
+// utils
+import { cn } from '@/lib/utils'
+
 // icons
 import { SidebarTrigger } from '@/components/ui/sidebar'
 
@@ -37,7 +40,10 @@ export function HeaderPage({
 }: HeaderProps) {
 	return (
 		<header
-			className={`mr-4 flex h-16 shrink-0 items-center justify-between gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 ${className}`}
+			className={cn(
+				'mr-4 flex h-16 shrink-0 items-center justify-between gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12',
+				className
+			)}
 		>
 			<div className='flex items-center gap-2 px-4'>
 				<SidebarTrigger className='-ml-1' />
