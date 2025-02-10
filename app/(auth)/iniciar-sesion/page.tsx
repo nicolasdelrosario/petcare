@@ -12,18 +12,18 @@ export default function IniciarSesion() {
 						<h1 className='text-2xl font-semibold tracking-tight'>
 							Accede a tu cuenta
 						</h1>
-						<p className='text-sm text-muted-foreground'>
+						<p className='text-muted-foreground text-sm'>
 							¡Bienvenido! Ingresa tus datos
 						</p>
 					</div>
 
 					<LoginForm />
 
-					<p className='px-8 text-center text-sm text-muted-foreground'>
+					<p className='text-muted-foreground px-8 text-center text-sm'>
 						¿No tienes una cuenta?
 						<a
 							href='/registrarse'
-							className='pl-2 text-sm font-medium text-primary hover:text-primary/90'
+							className='text-primary hover:text-primary/90 pl-2 text-sm font-medium'
 						>
 							Regístrate
 						</a>
