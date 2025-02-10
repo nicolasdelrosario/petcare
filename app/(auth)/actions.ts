@@ -8,8 +8,8 @@ import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 
 // types and schemas
-import { loginSchema } from '@/app/(auth)/utils/auth'
-import type { LoginInput } from '@/app/(auth)/utils/auth'
+import { loginSchema } from '@/schemas/auth'
+import type { LoginInput } from '@/schemas/auth'
 
 export async function login(data: LoginInput) {
 	const result = loginSchema.safeParse(data)
