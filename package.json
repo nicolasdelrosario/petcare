@@ -8,7 +8,10 @@
 		"start": "next start",
 		"lint": "next lint",
 		"format": "prettier --write .",
-		"format:check": "prettier --check ."
+		"format:check": "prettier --check .",
+		"preview": "opennextjs-cloudflare && wrangler dev",
+		"deploy": "opennextjs-cloudflare && wrangler deploy",
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^3.10.0",
@@ -39,6 +42,8 @@
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
+		"@opennextjs/aws": "3.4.2",
+		"@opennextjs/cloudflare": "^0.4.8",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^20",
 		"@types/react": "^19",
@@ -51,6 +56,7 @@
 		"prettier": "3.4.2",
 		"prettier-plugin-tailwindcss": "0.6.11",
 		"tailwindcss": "^4",
-		"typescript": "^5"
+		"typescript": "^5",
+		"wrangler": "3.107.3"
 	}
 }
