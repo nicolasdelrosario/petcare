@@ -8,7 +8,7 @@ interface Props {
 export function Providers({ children }: Props) {
 	return (
 		<ThemeProvider>
-			<Toaster toastOptions={{ duration: 3000 }} />
+			<Toaster toastOptions={{ duration: 3000 }} richColors />
 			{children}
 		</ThemeProvider>
 	)
