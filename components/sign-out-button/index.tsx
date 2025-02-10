@@ -10,9 +10,10 @@ import { Button } from '@/components/ui/button'
 // Actions
 import { logout } from '@/app/(auth)/actions'
 
-interface Props extends ComponentProps<typeof Button> {}
-
-export function SignOutButton({ className, ...props }: Props) {
+export function SignOutButton({
+	className,
+	...props
+}: ComponentProps<typeof Button>) {
 	const router = useRouter()
 
 	const handleSignout = async () => {

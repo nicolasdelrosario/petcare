@@ -77,13 +77,13 @@ export function CreateVeterinarianForm({ onClose }: Props) {
 			toast.success(CREATE_MESSAGES.SUCCESS.CREATE_SUCCESS)
 			form.reset()
 			onClose?.()
-		} catch (error) {
+
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		} catch (_error) {
 			toast.error(CREATE_MESSAGES.ERRORS.CREATE_ERROR)
 		} finally {
 			setIsLoading(false)
 		}
-
-		console.log(data)
 	}
 
 	return (

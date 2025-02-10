@@ -2,10 +2,12 @@
 
 // next and react
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
+import type { ComponentProps } from 'react'
 
-interface Props extends React.ComponentProps<typeof NextThemesProvider> {}
-
-export function ThemeProvider({ children, ...props }: Props) {
+export function ThemeProvider({
+	children,
+	...props
+}: ComponentProps<typeof NextThemesProvider>) {
 	return (
 		<NextThemesProvider
 			attribute='class'
