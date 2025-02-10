@@ -13,3 +13,23 @@ export const AUTH_MESSAGES = {
 		SIGN_IN: 'Ingresar',
 	},
 } as const
+
+export const CREATE_MESSAGES = {
+	// error messages
+	ERRORS: {
+		CREATE_ERROR: 'Error al registrar el veterinario',
+		REQUIRED_FIELDS: 'Por favor, completa todos los campos',
+	},
+	// success messages
+	SUCCESS: {
+		CREATE_SUCCESS: 'Registrado con éxito',
+	},
+	// loading states
+	LOADING: {
+		CREATING: 'Creando...',
+	},
+	// button labels
+	BUTTONS: {
+		CREATE: 'Registrar',
+	},
+}
