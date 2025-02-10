@@ -16,8 +16,8 @@ import { ROUTES } from '@/constants/routes'
 import { AUTH_MESSAGES } from '@/constants/messages'
 
 // types and schemas
-import type { LoginInput } from '@/app/(auth)/utils/auth'
-import { loginSchema } from '@/app/(auth)/utils/auth'
+import type { LoginInput } from '@/schemas/auth'
+import { loginSchema } from '@/schemas/auth'
 
 // ui components
 import { Button } from '@/components/ui/button'
@@ -53,7 +53,6 @@ export function LoginForm() {
 
 			if (result?.error) {
 				toast.error(AUTH_MESSAGES.ERRORS.LOGIN_ERROR, {
-					className: 'bg-red-500 text-white',
 					description: AUTH_MESSAGES.ERRORS.INVALID_CREDENTIALS,
 				})
 			}
@@ -64,7 +63,7 @@ export function LoginForm() {
 
 	return (
 		<Form {...form}>
-			<form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
+			<form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
 				<FormField
 					control={form.control}
 					name='email'
